@@ -1,0 +1,1064 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Kristi&family=Montserrat:wght@300&family=Playfair+Display&family=Poppins&family=Raleway&family=Roboto+Condensed&display=swap');
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar-brand {
+    img {
+        width: 50px;
+        margin-left: 10px;
+    }
+}
+
+li {
+    padding-right: 20px;
+}
+
+.navbar-nav {
+    margin-right: 15px;
+}
+
+// ------------------------home------------------------ 
+.hero {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    overflow: hidden;
+    background: url(./images/bgcolorful.jpg);
+    background-size: cover;
+
+    .parallax-text {
+        position: absolute;
+        font-family: "Montserrat", sans-serif;
+        font-size: 15vw;
+        font-style: italic;
+        /*     top: 1000px; */
+    }
+
+    parallax-text::before {
+        color: white;
+    }
+
+    .parallax-text::after {
+        content: attr(text);
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        color: transparent;
+        -webkit-text-stroke: 0.15vw rgb(3, 3, 3);
+    }
+
+    img {
+        width: 50vw;
+        animation: sneakerAnimation 2s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+    }
+
+    @keyframes sneakerAnimation {
+
+        0%,
+        10% {
+            transform: translate(100vw, 0) rotate(15deg);
+        }
+
+        90%,
+        100% {
+            transform: translate(-5vw, -5vw) rotate(-30deg);
+        }
+    }
+}
+
+
+
+
+
+.home {
+    width: 100%;
+    height: 100vh;
+    // background: url(./images/nike-home.webp);
+    // background-size: cover;
+    // background-position: center;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+    .container1 {
+        // background: #3b222231;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        // object-fit: fill;
+        // background-position: center;
+        // margin: 0;
+    }
+
+    .home-img {
+        // object-fit: fill;
+        width: 100%;
+        -webkit-box-shadow: 0px 0px 26px -8px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 26px -8px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 26px -8px rgba(0, 0, 0, 0.75);
+    }
+
+    h1 {
+        top: 0;
+        font-size: 8vw;
+        padding-top: 30px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 3vw;
+        letter-spacing: 3px;
+        padding-bottom: 10px;
+    }
+
+    .home-left {
+        position: absolute;
+        // left: 1;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        bottom: 0;
+    }
+
+    .home-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-right: 20px;
+        margin-bottom: 10vh;
+    }
+}
+
+.two {
+    margin-top: 30px;
+    // height: 100vh;
+
+    two_left_col {
+        width: 50vw;
+    }
+
+    two_right_col {
+        width: 50vw;
+        font-size: 10vw;
+    }
+
+    h4 {
+        color: rgb(152, 216, 248);
+        font-weight: bold;
+        font-size: 4vw;
+    }
+
+    h3 {
+        font-size: 6vw;
+        letter-spacing: 3px;
+    }
+
+    img {
+        object-fit: contain;
+
+        &:hover {
+            transform: scale(1.1);
+            -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+        }
+    }
+
+    .choice {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-size: 4vw;
+
+        .colors_field {
+            padding-top: 20px;
+            justify-content: space-between;
+        }
+
+        #blue,
+        #green,
+        #red,
+        #pink,
+        #yellow,
+        #black {
+
+
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+
+        }
+
+        #blue {
+            background: lightblue;
+        }
+
+        #green {
+            background: rgb(16, 156, 103);
+        }
+
+        #red {
+            background: rgb(237, 11, 11);
+        }
+
+        #pink {
+            background: rgb(250, 9, 194);
+        }
+
+        #yellow {
+            background: rgb(238, 248, 121);
+        }
+
+        #black {
+            background: rgb(25, 18, 23);
+        }
+
+
+    }
+
+    .sizechart1 {
+        position: absolute;
+        top: 0;
+
+        .size {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            font-size: 3vw;
+            // justify-content: space-between;
+        }
+    }
+
+    #para2 {
+        font-size: 3vw;
+        color: rgb(152, 216, 248);
+        margin-top: 10px;
+        margin-bottom: 0;
+        text-decoration: none;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+
+}
+
+// ========SHOE COLORS====== 
+
+//   .shoes-card{
+//     width: 400px;
+//     background: #ecedef;
+//     padding: 40px;
+//     position: relative;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%,-50%);
+//     text-transform: uppercase;
+//   }
+//   .shoes-card h1{
+//     font-size: 22px;
+//     margin-bottom: 4px;
+//   }
+//   .shoes-card p{
+//     font-size: 13px;
+//     color: #bbb;
+//   }
+//   .shoes-pic{
+//     background-image: url(1.png);
+//     width: 100%;
+//     height: 200px;
+//     background-size: cover;
+//     background-position: center;
+//     transition: .6s linear;
+//   }
+//   .shoes-colors{
+//     margin-bottom: 40px;
+//     display: flex;
+//     justify-content: center;
+//   }
+
+//   .shoes-colors span{
+//     width: 14px;
+//     height: 14px;
+//     margin: 0 10px;
+//     border-radius: 50%;
+//     cursor: pointer;
+//     position: relative;
+//   }
+//   .blue{
+//     background: #7ed6df;
+//   }
+//   .green{
+//     background: #badc58;
+//   }
+//   .yellow{
+//     background: #f9ca24;
+//   }
+//   .rose{
+//     background: #ff7979;
+//   }
+
+//   .shoes-colors .active:after{
+//     content: "";
+//     width: 22px;
+//     height: 22px;
+//     border: 2px solid #8888;
+//     position: absolute;
+//     border-radius: 50%;
+//     box-sizing: border-box;
+//     left: -4px;
+//     top: -4px;
+//   }
+//   .shoes-info{
+//     display: flex;
+//     align-items: center;
+//   }
+//   .shoes-price{
+//     color: #7ed6df;
+//     font-size: 26px;
+//   }
+//   .shoes-button{
+//     margin-left: auto;
+//     color: #7ed6df;
+//     text-decoration: none;
+//     border: 2px solid;
+//     padding: 8px 24px;
+//     border-radius: 20px;
+//     transition: .4s linear;  
+//   }
+
+//   .shoes-button:hover{
+//     transform: scale(1.06);
+//   }
+
+
+
+// ABOUT SHOES 
+.release {
+    background: rgb(133, 165, 253);
+    background: linear-gradient(90deg, rgba(133, 165, 253, 1) 0%, rgba(101, 126, 195, 1) 100%);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    padding-top: 10vh;
+
+    .benefits {
+        color: white;
+        margin-top: 30px;
+    }
+}
+
+.three {
+
+
+    img {
+        width: 60vw;
+        transform: rotate(-30deg);
+        margin-top: -80px;
+        filter: drop-shadow(50px 50px 3px #79727271);
+    }
+
+}
+
+// @media screen and (min-width:992px) {
+//     .three {
+//         img {
+//             margin-top: -140px;
+//         }
+//     }
+// }
+
+
+// ======guide====== 
+.guide {
+    font-family: 'Kristi', cursive;
+    z-index: auto;
+    opacity: 0.05;
+    font-size: 25vw;
+    transform: rotate(-10deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width:992px) {
+    .guide {
+        font-size: 300px;
+    }
+
+}
+
+// =========three========= 
+.three {
+
+    // border: solid red;
+    h4 {
+        color: rgb(79, 86, 86);
+        font-weight: bold;
+        z-index: 2;
+        font-size: 4vw;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    h5 {
+        color: rgb(152, 216, 248);
+        z-index: 2;
+        font-size: 3vw;
+    }
+
+    .calculate_section {
+        margin-top: 20px;
+        margin-left: -30vw;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
+        // text-align: left;
+        // padding: 1rem;
+        position: relative;
+    }
+
+    .left-part {
+        width: 50vw;
+    }
+
+    .coll {
+        img {
+            margin-left: -40%;
+        }
+
+        width: 50vw;
+    }
+
+
+}
+
+
+
+// @media screen and (min-width: 576px) {
+//     .three {
+//     .calculate_section {
+//         margin-left: -240px;
+//     }
+// }
+@media screen and (min-width: 576px) {
+
+    //     .three {
+    //     .calculate_section {
+    //         margin-left: -390px;
+    //     }
+    // }
+    .left-part {
+        width: 50vw;
+    }
+
+    .coll {
+        img {
+            margin-left: -20%;
+        }
+
+        width: 50vw;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+// @media screen and (min-width: 576px){
+//     img{
+//         margin-right: 10px;
+//     }
+
+// }
+// @media screen and (min-width: 786px){
+//     img{
+//         margin-right: 20px;
+//     }
+
+// }
+// @media screen and (min-width: 992px){
+//     img{
+//         margin-right: 30px;
+//     }
+
+// }
+// @media screen and (min-width: 1200px){
+//     img{
+//         margin-right: 40px;
+//     }
+
+// }
+
+// @media (1000px <= width <= 1500px){
+//     .roww {
+//         border: solid red;
+//         display: flex;
+//         flex-direction: row;
+//         div{
+
+//             border: solid blue;
+//         }
+//     h4 {
+//         color: rgb(79, 86, 86);
+//         font-weight: bold;
+//         z-index: 2;
+//         font-size: 20px;
+//         display: flex;
+//         flex-direction: row;
+
+//     }
+//     .coll{
+//         img{
+//             // height: 50vh;
+//             width: 50vw;
+//         }
+//     }
+//     .calculate_section{
+//         border: pink;
+
+//     }
+// }
+// }
+
+// @media (436px <= width <= 1000px){
+//     .left_part{
+//         width: 50vw;
+//     }
+//     .coll{
+//         img{
+//             // height: 50vh;
+//             width: 50vw;
+//         }
+//     }
+// }
+// @media (992px <= width <= 1193px){
+//     .left_part{
+//         width: 50vw;
+//     }
+//     .coll{
+//         img{
+//             // height: 50vh;
+//             width: 50vw;
+//         }
+//     }
+// }
+// @media screen and (min-width: 992px) {
+//     .calculate_section {
+//         margin-top: 20px;
+//         margin-left: -333px;
+//         position: relative;
+
+//         h4 {
+//             font-size: 40px;
+//         }
+
+//         h5 {
+//             font-size: 30px;
+//         }
+//     }
+// }
+
+
+
+// ===============================footer================================= 
+
+// =============================Range Labels=========================
+.select_size {
+
+    padding: 100px;
+
+
+    @mixin rangeThumb {
+        width: 18px;
+        height: 18px;
+        margin: -8px 0 0;
+        border-radius: 50%;
+        background: #37adbf;
+        cursor: pointer;
+        border: 0 !important;
+    }
+
+    @mixin rangeTrack {
+        width: 100%;
+        height: 2px;
+        cursor: pointer;
+        background: #b2b2b2;
+    }
+
+    .range {
+        position: relative;
+        width: 550px;
+        height: 5px;
+    }
+
+    .range input {
+        width: 100%;
+        position: absolute;
+        top: 2px;
+        height: 0;
+        -webkit-appearance: none;
+
+        // Thumb
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none; // needed again for Chrome & Safari
+            @include rangeThumb;
+        }
+
+        &::-moz-range-thumb {
+            @include rangeThumb;
+        }
+
+        &::-ms-thumb {
+            @include rangeThumb;
+        }
+
+        // Track
+        &::-webkit-slider-runnable-track {
+            @include rangeTrack;
+        }
+
+        &::-moz-range-track {
+            @include rangeTrack;
+        }
+
+        &::-ms-track {
+            @include rangeTrack;
+        }
+
+        &:focus {
+            // override outline/background on focus
+            background: none;
+            outline: none;
+        }
+
+        &::-ms-track {
+            // A little somethin' somethin' for IE
+            width: 100%;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+    }
+
+    // Labels below slider
+    .range-labels {
+        margin: 18px -41px 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            float: left;
+            width: 90.25px;
+            text-align: center;
+            color: #b2b2b2;
+            font-size: 14px;
+            cursor: pointer;
+
+            &::before {
+                position: absolute;
+                top: -25px;
+                right: 0;
+                left: 0;
+                content: "";
+                margin: 0 auto;
+                width: 9px;
+                height: 9px;
+                background: #b2b2b2;
+                border-radius: 50%;
+            }
+        }
+
+        .active {
+            color: #37adbf;
+        }
+
+        .selected::before {
+            background: #37adbf;
+        }
+
+        .active.selected::before {
+            display: none;
+        }
+    }
+}
+
+// Labels below slider
+.range-labels {
+    margin: 18px -41px 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        position: relative;
+        float: left;
+        width: 90.25px;
+        text-align: center;
+        color: #b2b2b2;
+        font-size: 14px;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            top: -25px;
+            right: 0;
+            left: 0;
+            content: "";
+            margin: 0 auto;
+            width: 9px;
+            height: 9px;
+            background: #b2b2b2;
+            border-radius: 50%;
+        }
+    }
+
+    .active {
+        color: #37adbf;
+    }
+
+    .selected::before {
+        background: #37adbf;
+    }
+
+    .active.selected::before {
+        display: none;
+    }
+}
+
+// ==========four===========
+.four {
+    img {
+        width: 10vw;
+        padding-bottom: 10px;
+    }
+
+    .single_measure {
+        // width: 10vw;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+}
+
+// =========FIVE=========
+.five {
+    background: #fb02b9cd;
+
+    // height: 25vh;
+    .container1 {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        padding-left: 3vw;
+
+        #p_one {
+            font-size: 3vw;
+        }
+
+        #p_two {
+            font-size: 2vw;
+        }
+
+        #p_three {
+            font-size: 5vw;
+            font-weight: bold;
+            // margin-top: 0;
+            text-shadow: 0px 0px 38px rgba(220, 194, 194, 0.3);
+        }
+
+        #p_four {
+            font-size: 2vw;
+        }
+
+    }
+
+    .s_r {
+        margin-bottom: 3vw;
+    }
+}
+
+.gallery_review_section {
+
+    .shoe_gallery {
+
+        display: flex;
+
+        .shoe_gallery_left {
+            width: 40vw;
+            margin-left: 20px;
+            margin-top: -10vw;
+        }
+
+        .review {
+            width: 50vw;
+            font-size: 3vw;
+
+            .review_name {
+                padding: 0;
+                margin: 0;
+                font-size: 2.2vw;
+            }
+
+            .review_rate {
+                padding: 0;
+                margin: 0;
+                font-size: 2.2vw;
+            }
+
+            // ------progress bar-----
+            .progressing {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                // height: 5vh;
+                padding: 0;
+                margin: 0;
+
+                .progress {
+                    background: rgba(193, 162, 162, 0.1);
+                    justify-content: flex-start;
+                    border-radius: 100px;
+                    align-items: center;
+                    position: relative;
+                    // padding: 0 5px;
+                    display: flex;
+                    height: 1vh;
+                    width: 500px;
+                    // padding-top: 0;
+                }
+
+                .progress-value {
+                    animation: load 3s normal forwards;
+                    box-shadow: 0 10px 40px -10px #fff;
+                    border-radius: 100px;
+                    height: 1vh;
+                    width: 0;
+                }
+
+                @keyframes load {
+                    0% {
+                        width: 0;
+                    }
+
+                    100% {
+                        width: 68%;
+                    }
+                }
+            }
+        }
+
+        // ----single---- 
+        .r_one {
+            color: #e72525;
+        }
+
+        .v_one {
+            background: #e72525;
+        }
+
+        // ----single---- 
+        .r_two {
+            color: #4dc9ef;
+        }
+
+        .v_two {
+            background: #4dc9ef;
+        }
+
+        // ----single---- 
+        .r_three {
+            color: #11d638;
+        }
+
+        .v_three {
+            background: #11d638;
+        }
+
+        // ----single---- 
+        .r_four {
+            color: #f21ea1;
+        }
+
+        .v_four {
+            background: #f21ea1;
+        }
+    }
+}
+
+@media (max-width:576px) and (min-width:319px) {
+    .three {
+        img {
+            margin-top: -23px;
+            width: 54vw;
+        }
+
+        h4 {
+            font-size: 5vw;
+        }
+
+        h5 {
+            font-size: 4vw;
+        }
+    }
+
+    // .two{
+    //     .img{
+    //         &:hover {
+    //             transform: scale(1.1);
+    //             -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+    //             -moz-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+    //             box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.75);
+    //         }
+    //     }
+    // }
+
+    .review_rate {
+        font-size: 4.5vw;
+    }
+
+    .review_name {
+        font-size: 3.5vw;
+    }
+
+    .release {
+        height: 550px;
+    }
+
+    .s_r {
+        margin-bottom: 3vw;
+    }
+
+
+    .home {
+        height: 50vh;
+
+        .container1 {
+            height: 50vh;
+        }
+
+        h3 {
+            font-size: 4vw;
+        }
+    }
+
+    .hero {
+        .parallax-text {
+            font-size: 25vw;
+        }
+    }
+
+
+
+    .hero {
+        height: 50vh;
+    }
+
+    .five {
+        #p_two {
+            font-size: 4vw;
+        }
+
+        #p_four {
+            font-size: 4vw;
+        }
+
+        .container1 {
+            height: 15vh;
+        }
+    }
+
+    .gallery_review_section {
+        .shoe_gallery {
+            .shoe_gallery_left {
+                width: 40vw;
+                margin-left: 14px;
+                margin-top: -11vw;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:420px)and (max-width:576px) {
+    .five {
+        height: 18vh;
+    }
+}
+
+
+.radiobtn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.shoes-price {
+    // font-size: 5vw;
+    font-weight: bold;
+
+    .buynow {
+
+        font-size: 2vw;
+
+    }
+
+    // a{
+    //     margin-top: 10px;
+    // }
+}
+
+@media screen and (min-width:1300px) {
+    .shoes-price {
+        font-size: 3vw;
+    }
+
+    .buynow {
+        font-size: 3vw;
+    }
+
+    .two_right_col {
+        .radiobtn {
+            margin-top: 5vw;
+            font-size: 2vw;
+        }
+
+        table {
+            font-size: 2vw;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+        }
+    }
+
+    .three {
+        .calculate_section {
+            margin-left: -16vw;
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    s_r{
+        margin-bottom: 3vw;
+    }
+}
